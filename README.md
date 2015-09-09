@@ -11,6 +11,7 @@ for each of those I try to add and option in this script.
 
 ## Features
 - Add Powertop needed options.
+- Add Docker needed options.
 
 ## Options
 No options actually @TODO.

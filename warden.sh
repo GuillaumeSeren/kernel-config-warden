@@ -28,3 +28,47 @@ sed -i 's/.*CONFIG_X86_MSR.*/CONFIG_X86_MSR=m/' .config
 # Docker {{{1
 echo "Check Docker needs"
 sed -i 's/.*CONFIG_VETH.*/CONFIG_VETH=m/' .config
+
+# FUNCTION usage() {{{1
+# Return the helping message for the use.
+function usage()
+{
+cat << DOC
+
+usage: "$0" options
+
+This script check needed param in the kernel config.
+
+
+OPTIONS:
+    -h  Show this message.
+
+Sample:
+
+DOC
+}
+
+# GETOPTS {{{1
+# Get the param of the script.
+while getopts ":h" OPTION
+do
+    flagGetOpts=1
+    case $OPTION in
+    h)
+        usage
+        exit 1
+        ;;
+    ?)
+        echo "commande $1 inconnue"
+        usage
+        exit
+        ;;
+    esac
+done
+# We check if getopts did not find no any param
+if [ "$flagGetOpts" == 0 ]; then
+    echo 'This script cannot be launched without options.'
+    usage
+    exit 1
+fi
+

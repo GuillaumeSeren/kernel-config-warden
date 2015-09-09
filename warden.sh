@@ -22,17 +22,6 @@
 # 0 - Ok
 # 1 - Error in cmd / options
 
-# main {{{1
-echo "Kernel Config check"
-
-# Powertop {{{1
-echo "Check Powertop needs"
-sed -i 's/.*CONFIG_X86_MSR.*/CONFIG_X86_MSR=m/' .config
-
-# Docker {{{1
-echo "Check Docker needs"
-sed -i 's/.*CONFIG_VETH.*/CONFIG_VETH=m/' .config
-
 # FUNCTION usage() {{{1
 # Return the helping message for the use.
 function usage()
@@ -76,3 +65,14 @@ if [ "$flagGetOpts" == 0 ]; then
     exit 1
 fi
 
+# main {{{1
+function main() {
+    echo "Kernel Config check"
+    # Powertop {{{1
+    echo "Check Powertop needs"
+    sed -i 's/.*CONFIG_X86_MSR.*/CONFIG_X86_MSR=m/' .config
+    # Docker {{{1
+    echo "Check Docker needs"
+    sed -i 's/.*CONFIG_VETH.*/CONFIG_VETH=m/' .config
+}
+main

@@ -18,6 +18,10 @@
 # @TODO: Add a param to select the option in list: docker,powertop .
 # @TODO: Add a function to test need external programs (sed).
 
+# Error Codes {{{1
+# 0 - Ok
+# 1 - Error in cmd / options
+
 # main {{{1
 echo "Kernel Config check"
 

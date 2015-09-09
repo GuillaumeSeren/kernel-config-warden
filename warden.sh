@@ -12,11 +12,9 @@
 # ---------------------------------------------
 
 # TaskList {{{1
-# @TODO: Add param for the script call.
-# @TODO: Add usage function to provide help.
-# @TODO: Add main function to centralize the process.
 # @TODO: Add a param to select the option in list: docker,powertop .
 # @TODO: Add a function to test need external programs (sed).
+# @TODO: Get the sed result and output it if error.
 
 # Error Codes {{{1
 # 0 - Ok

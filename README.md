@@ -14,7 +14,12 @@ for each of those I try to add and option in this script.
 - Add Docker needed options.
 
 ## Options
-No options actually @TODO.
+See the embed help may be more up to date.
+`./warden.sh -h`
+
+CODE | OPTION               | DESCRIPTION
+-----|----------------------|------------
+`-f` | `Target config file` | Select the target .config file to patch.
 
 ## Installation
 @TODO
